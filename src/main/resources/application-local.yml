@@ -1,5 +1,50 @@
+server:
+  port: 8080
+
 spring:
   jpa:
     properties:
       hibernate:
         dialect: me.ssu.querydslrestapi.global.config.jpa.MySQLDialect
+
+logging:
+  level:
+#    root: info
+#    me:
+#      ssu:
+#        myqadmin: debug
+#      amazonaws:
+#        internal:
+#          InstanceMetadataServiceResourceFetcher: error
+#        util:
+#          EC2MetadataUtils: error
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql:
+              BasicBinder: off
+        SQL: off
+      springframework:
+        data:
+          redis: trace
+          mongodb:
+            core:
+              MongoTemplate: debug
+        boot:
+          autoconfigure: error
+
+#feign-client-config
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: FULL
+
+#external-api
+external-api:
+
+#springdoc-api-docs
+springdoc:
+  api-docs:
+    enabled: true
