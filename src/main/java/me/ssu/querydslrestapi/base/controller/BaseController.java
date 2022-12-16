@@ -1,4 +1,4 @@
-package me.ssu.querydslrestapi.domains.common.controller;
+package me.ssu.querydslrestapi.base.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import me.ssu.querydslrestapi.global.dto.ApiResponse;
