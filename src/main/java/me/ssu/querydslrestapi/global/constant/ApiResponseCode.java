@@ -34,8 +34,7 @@ public enum ApiResponseCode {
 	REFRESH_FAILED(401, "R40110", "로그인 이력이 없거나 유효하지 않은 refreshToken 입니다."),
 	REFRESH_FAILED_EXPIRED_TOKEN(401, "R40111", "만료 된 refreshToken 입니다."),
 	REFRESH_FAILED_EXPIRED_EXTENSION_FAIL(401, "R40112", "토큰을 생성할 수 없습니다. refreshToken 의 만료시간연장이 실패했습니다."),
-	LOGIN_FAILED_SDN(401, "R40113", "[재종 ERP] %s"),
-	AUTH_NOT_FOUND(401, "R40114", "관리자 권한 정보가 없습니다."),
+	AUTH_NOT_FOUND(401, "R40113", "관리자 권한 정보가 없습니다."),
 
 	ACCESS_DENIED(403, "R40300", "접근이 허용되지 않습니다."),
 	UNAUTHORIZED_IP_ADDRESS(403, "R40301", "접근이 허용되지 않는 IP 입니다."),
