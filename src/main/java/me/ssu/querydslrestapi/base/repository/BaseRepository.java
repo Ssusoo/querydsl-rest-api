@@ -1,4 +1,4 @@
-package me.ssu.querydslrestapi.domains.repository;
+package me.ssu.querydslrestapi.base.repository;
 
 import com.querydsl.core.types.EntityPath;
 import com.querydsl.core.types.Expression;
