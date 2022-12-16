@@ -1,0 +1,5 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: me.ssu.querydslrestapi.global.config.jpa.MySQLDialect
