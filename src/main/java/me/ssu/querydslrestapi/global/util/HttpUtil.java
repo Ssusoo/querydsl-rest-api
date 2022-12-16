@@ -23,6 +23,11 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+/**
+ * HTTP Settings-3(HttpUtil 클래스 만들기)
+ *  HttpUtil 클래스 정의
+ *      HTTP 요청을 보내고 URI로 식별된 리소스에서 HTTP 응답을 수신하는 클래스
+ */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @Slf4j
 public class HttpUtil {

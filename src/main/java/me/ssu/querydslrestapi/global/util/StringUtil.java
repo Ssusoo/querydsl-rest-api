@@ -3,6 +3,14 @@ package me.ssu.querydslrestapi.global.util;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * HTTP Settings-2(스프링 유틸 클래스 만들기)
+ *  스프링 유틸 정의
+ *      자바의 String 클래스가 제공하는 문자열 관련 기능을 강화한 클래스
+ *  스프링 유틸 장점
+ *      StringUtil 클래스만으로 거의 대부분의 문자열 처리를 수행함.
+ *      파라미터 값으로 null을 주더라도 절대 'NullPointException'을 발생시키지 않음
+ */
 public class StringUtil {
 
 	/**
@@ -75,7 +83,6 @@ public class StringUtil {
 				e.printStackTrace();
 			}
 		}
-
 		return result;
 	}
 }
