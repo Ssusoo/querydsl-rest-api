@@ -40,6 +40,10 @@ feign:
     config:
       default:
         loggerLevel: FULL
+#NONE : 로깅하지 않습니다. (DEFAULT)
+#BASIC : Request Method와 URL 그리고 Reponse 상태 코드와 실행 시간을 로깅합니다.
+#HEADERS : Request, Response Header 정보와 함께 BASIC 정보를 로깅합니다.
+#FULL : Request와 Response의 Header, Body 그리고 메타데이터를 로깅합니다.
 
 #external-api
 external-api:
