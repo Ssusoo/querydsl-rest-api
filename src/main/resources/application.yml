@@ -1,0 +1,104 @@
+spring:
+  profiles:
+    active: local
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+  jpa:
+    open-in-view: false
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+      use-new-id-generator-mappings: false
+    show-sql: false
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 500
+          batch_versioned_data: true
+        order_inserts: true
+        order_updates: true
+        format_sql: true
+  jackson:
+    mapper:
+      allow-coercion-of-scalars: false
+    serialization:
+      fail-on-empty-beans: false
+  datasource:
+    hikari:
+      data-source-properties:
+        rewriteBatchedStatements: true
+      idle-timeout: 10000
+      connection-timeout: 10000
+      validation-timeout: 10000
+  data:
+    web:
+      pageable:
+        one-indexed-parameters: true
+        default-page-size: 15
+        max-page-size: 100
+        page-parameter: page
+        size-parameter: pageSize
+    redis:
+      repositories:
+        enabled: false
+    elasticsearch:
+      repositories:
+        enabled: false
+  cache:
+    jcache:
+      config: classpath:ehcache.xml
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
+
+server:
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  error:
+    whitelabel.enabled: false
+  shutdown: graceful
+
+management:
+  health:
+    redis:
+      enabled: false
+  endpoint:
+    health:
+      enabled: true
+
+springdoc:
+  swagger-ui:
+    groups-order: ASC
+    operationsSorter: method
+    path: /api-docs/swagger-ui
+  packages-to-scan: me.ssu.querydslrestapi.domains
+  paths-to-match: /v1/**
+  use-fqn: true
+  model-and-view-allowed: true
+  api-docs:
+    enabled: false
+
+feign:
+  okhttp:
+    enabled: true
+  httpclient:
+    enabled: false
+  client:
+    config:
+      default:
+        connectTimeout: 20000
+        readTimeout: 30000
+        loggerLevel: NONE
+        decoder: feign.gson.GsonDecoder
+
+logging:
+  level:
+    root: off
