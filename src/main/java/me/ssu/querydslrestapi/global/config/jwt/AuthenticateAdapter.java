@@ -7,6 +7,9 @@ import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
 
+/**
+ * Jwt Token-3
+ */
 @Component("authenticateAdapter")
 @RequestScope(proxyMode = ScopedProxyMode.TARGET_CLASS)
 @Getter

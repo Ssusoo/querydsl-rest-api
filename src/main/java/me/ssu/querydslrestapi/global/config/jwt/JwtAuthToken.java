@@ -20,6 +20,14 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.*;
 
+/**
+ * Jwt Token-2
+ *  Jwt의 생김새(.을 구분자로 3가지의 문자열로 되어 있다.)
+ *      1) aaaaaa[헤더(header)]
+ *      2) bbbbbb[내용(payload)]
+ *      3) cccccc[서명(signature)]
+ *      * aaaaa
+ */
 @Slf4j
 public class JwtAuthToken implements AuthToken<Claims> {
 
